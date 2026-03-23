@@ -8,6 +8,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.37/moment-timezone-with-data-1970-2030.min.js"></script>
     <title>World Clock - Cris Caraça</title>
   </head>
   <body>
@@ -21,7 +23,7 @@
         <option value="">Auckland</option>
       </select>
 
-      <div class="city">
+      <div class="city" id="paris">
         <div>
           <h2>
             <img src="https://flagcdn.com/24x18/fr.png" />
@@ -31,7 +33,7 @@
         </div>
         <div class="time">1:48:15 <small> AM </small></div>
       </div>
-      <div class="city">
+      <div class="city" id="los-angeles">
         <div>
           <h2>
             <img src="https://flagcdn.com/24x18/us.png" />
