@@ -29,6 +29,7 @@ select {
   border: 1px solid #ddd;
   background: #fafafa;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .container {
@@ -78,15 +79,50 @@ footer {
   color: rgba(0, 0, 0, 0.8);
 }
 
+button {
+  display: none;
+  text-align: center;
+  font-weight: 600;
+  color: #2d2d2d;
+  font-size: 16px;
+  border-radius: 8px;
+  padding: 12px;
+  border: 1px solid #958a8a;
+  background: #fafafa;
+  margin: 0 auto 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+button:hover {
+  background: #2d2d2d;
+  color: #fafafa;
+  cursor: pointer;
+}
+
 @media (prefers-color-scheme: dark) {
   body {
     background-color: #121212;
     color: #f1f1f1;
+    position: relative;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
   }
 
   .container {
     background: #1e1e1e;
     box-shadow: none;
+    position: relative;
+    z-index: 1;
+  }
+
+  .time {
+    color: #e8e8e8;
   }
 
   select {
@@ -105,5 +141,12 @@ footer {
 
   footer {
     color: rgba(255, 255, 255, 0.7);
+  }
+
+  button {
+    display: none;
+    background: #2a2a2a;
+    color: #f1f1f1;
+    border-color: #555;
   }
 }
